@@ -1,10 +1,15 @@
-site_name: Github Actions Workflow for Azure App with Federated Credentials
+site_name: Github Actions Workflow with Federated Identity to host App in Azure
+nav:
+  - "1. Introduction": "index.md"
+  - "2. Resource Group": "page2.md"
+  - "3. App, SP, Role": "page3.md"
+  - "4. Secrets": "page4.md"
+  - "5. Workflow": "page5.md"
+
 theme:
   name: material
   features:
-    - navigation.tabs
     - navigation.sections
-    - toc.integrate
     - navigation.top
     - search.suggest
     - search.highlight
