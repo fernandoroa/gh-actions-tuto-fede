@@ -18,15 +18,15 @@ Pages (left) refer to [youtube video](https://www.youtube.com/watch?v=0jPclM5fAL
 
 8.  Copy SECRETS to the clipboard and paste them in Github:
 
-    - paste the AZURE_SUBSCRIPTION_ID value in Github / Settings / Secrets and Variables / Actions
+    - paste the `AZURE_SUBSCRIPTION_ID` value in Github / Settings / Secrets and Variables / Actions
 
             ❯ echo $AZURE_SUBSCRIPTION_ID | xclip -selection clipboard
 
-    - paste the APP_ID value as AZURE_CLIENT_ID in Github / Settings / Secrets and Variables / Actions
+    - paste the `APP_ID` value as `AZURE_CLIENT_ID` in Github / Settings / Secrets and Variables / Actions
 
             ❯ echo $APP_ID | xclip -selection clipboard
 
-    - paste the AZURE_TENANT_ID value in Github / Settings / Secrets and Variables / Actions
+    - paste the `AZURE_TENANT_ID` value in Github / Settings / Secrets and Variables / Actions
 
             ❯ echo $AZURE_TENANT_ID | xclip -selection clipboard
 
