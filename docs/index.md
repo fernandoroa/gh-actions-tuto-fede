@@ -23,7 +23,7 @@ Pages (left) refer to [youtube video](https://www.youtube.com/watch?v=0jPclM5fAL
 
 2.  Microsoft Entra
 
-    - login url: https://entra.microsoft.com
+    - login url: [https://entra.microsoft.com](https://entra.microsoft.com)
 
 3.  Github Account
 
@@ -33,6 +33,9 @@ Pages (left) refer to [youtube video](https://www.youtube.com/watch?v=0jPclM5fAL
 
 2.  Go to: [https://github.com/new/import](https://github.com/new/import)
 
-    - URL for your source repository: `https://github.com/MicrosoftLearning/eShopOnWeb`
+    - URL for your source repository:
+
+            https://github.com/MicrosoftLearning/eShopOnWeb
+
     - Your username / access token: <code>&nbsp;&nbsp;&nbsp;</code> (empty)
     - Repository Name: `eShop` (example)

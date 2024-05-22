@@ -16,18 +16,28 @@ Pages (left) refer to [youtube video](https://www.youtube.com/watch?v=0jPclM5fAL
 
         ❯ az provider register --namespace Microsoft.Web
 
-5.  Create App and get APP_ID:
+5.  Create App:
 
-        ❯ export myApp=eShop
-        ❯ az ad app create --display-name $myApp > app.json
-        ❯ export APP_ID=$(awk 'BEGIN { FS="\""; RS="," }; { if ($2 == "appId") {print $4} }' app.json)
-        ❯ echo $APP_ID
+    - get `.json` file
+
+            ❯ export myApp=eShop
+            ❯ az ad app create --display-name $myApp > app.json
+
+    - get `APP_ID` from `.json` file
+
+            ❯ export APP_ID=$(awk 'BEGIN { FS="\""; RS="," }; { if ($2 == "appId") {print $4} }' app.json)
+            ❯ echo $APP_ID
 
 6.  Create the Service Principal:
 
-        ❯ az ad sp create --id $APP_ID > service.json
-        ❯ export SP_ID=$(awk 'BEGIN { FS="\""; RS="," }; { if ($2 == "id") {print $4} }' service.json)
-        ❯ echo $SP_ID
+    - get `.json` file
+
+            ❯ az ad sp create --id $APP_ID > service.json
+
+    - get `SP_ID` from `.json` file
+
+            ❯ export SP_ID=$(awk 'BEGIN { FS="\""; RS="," }; { if ($2 == "id") {print $4} }' service.json)
+            ❯ echo $SP_ID
 
 7.  Create Role Assignment:
 
