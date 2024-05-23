@@ -26,7 +26,7 @@ Pages (left) refer to [youtube video](https://www.youtube.com/watch?v=0jPclM5fAL
     - Add id-token permissions:  
       Add this after `on:` line
 
-          ```yml title="eshoponweb-cicd.yml"
+          ``` yaml title="eshoponweb-cicd.yml"
           permissions:
             contents: read
             id-token: write
@@ -43,7 +43,7 @@ Pages (left) refer to [youtube video](https://www.youtube.com/watch?v=0jPclM5fAL
           - remove `creds:` key line
           - add:
 
-              ```yml title="eshoponweb-cicd.yml"
+              ``` yaml title="eshoponweb-cicd.yml"
               client-id: ${{ secrets.AZURE_CLIENT_ID }}
               tenant-id: ${{ secrets.AZURE_TENANT_ID }}
               subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}

@@ -8,7 +8,9 @@ Pages (left) refer to [youtube video](https://www.youtube.com/watch?v=0jPclM5fAL
 
 5.  xclip or equivalent
 
-        ❯ sudo apt install xclip
+    ```sh
+    ❯ sudo apt install xclip
+    ```
 
 6.  nano editor or any text editor
 
@@ -20,21 +22,29 @@ Pages (left) refer to [youtube video](https://www.youtube.com/watch?v=0jPclM5fAL
 
     - paste the `AZURE_SUBSCRIPTION_ID` value in Github / Settings / Secrets and Variables / Actions
 
-            ❯ echo $AZURE_SUBSCRIPTION_ID | xclip -selection clipboard
+          ``` sh
+          ❯ echo $AZURE_SUBSCRIPTION_ID | xclip -selection clipboard
+          ```
 
     - paste the `APP_ID` value as `AZURE_CLIENT_ID` in Github / Settings / Secrets and Variables / Actions
 
-            ❯ echo $APP_ID | xclip -selection clipboard
+          ``` sh
+          ❯ echo $APP_ID | xclip -selection clipboard
+          ```
 
     - paste the `AZURE_TENANT_ID` value in Github / Settings / Secrets and Variables / Actions
 
-            ❯ echo $AZURE_TENANT_ID | xclip -selection clipboard
+          ``` sh
+          ❯ echo $AZURE_TENANT_ID | xclip -selection clipboard
+          ```
 
 9.  Create the federated Identity
 
     - create the credential.json file
 
-            ❯ nano credential.json
+          ``` zsh
+          ❯ nano credential.json
+          ```
 
     - Content: (update with your repository data)
 
@@ -50,6 +60,6 @@ Pages (left) refer to [youtube video](https://www.youtube.com/watch?v=0jPclM5fAL
 
     - Federated identity command:
 
-          ```sh
+          ``` zsh
           ❯ az ad app federated-credential create --id $APP_ID --parameters credential.json > federated.json
           ```
