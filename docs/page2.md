@@ -23,32 +23,44 @@ Pages (left) refer to [youtube video](https://www.youtube.com/watch?v=0jPclM5fAL
 
     - create .json file
 
-            ❯ az login > login.json
+          ```zsh
+          ❯ az login > login.json
+          ```
 
     - continue login process on browser
     - contents of .json
 
-            ❯ cat login.json
+          ```zsh
+          ❯ cat login.json
+          ```
 
 2.  Save secrets locally (these SECRETS are for later):
 
     - From .json to system variable:
 
-            ❯ export AZURE_SUBSCRIPTION_ID=$(awk 'BEGIN { FS="\""; RS="," }; { if ($2 == "id") {print $4} }' login.json)
-            ❯ echo $AZURE_SUBSCRIPTION_ID
+          ```zsh
+          ❯ export AZURE_SUBSCRIPTION_ID=$(awk 'BEGIN { FS="\""; RS="," }; { if ($2 == "id") {print $4} }' login.json)
+          ❯ echo $AZURE_SUBSCRIPTION_ID
+          ```
 
     - From .json to system variable:
 
-            ❯ export AZURE_TENANT_ID=$(awk 'BEGIN { FS="\""; RS="," }; { if ($2 == "tenandId") {print $4} }' login.json)
-            ❯ echo $AZURE_TENANT_ID
+          ```zsh
+          ❯ export AZURE_TENANT_ID=$(awk 'BEGIN { FS="\""; RS="," }; { if ($2 == "tenandId") {print $4} }' login.json)
+          ❯ echo $AZURE_TENANT_ID
+          ```
 
 3.  Create Resource Group
 
     - Save name to system variable:
 
-            ❯ export AZURE_ESHOP_RESOURCE_GROUP=rg-eshoponweb-federated
-            ❯ echo $AZURE_ESHOP_RESOURCE_GROUP
+          ```zsh
+          ❯ export AZURE_ESHOP_RESOURCE_GROUP=rg-eshoponweb-federated
+          ❯ echo $AZURE_ESHOP_RESOURCE_GROUP
+          ```
 
     - Create group:
 
-            ❯ az group create --name $AZURE_ESHOP_RESOURCE_GROUP --location "South Central US" > group.json
+          ```zsh
+          ❯ az group create --name $AZURE_ESHOP_RESOURCE_GROUP --location "South Central US" > group.json
+          ```
